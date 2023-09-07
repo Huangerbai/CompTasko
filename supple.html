@@ -62,7 +62,7 @@
 		<br>
 		<br>
 		
-		<p align="left"><font size="5"> 1. Detailed Network Structures</font></p>
+		<p align="left"><font size="5"> Detailed Network Structures</font></p>
 		<p align="left">Our feature extractor and analytics models follow the encoder and decoder of the taskonomy. <br />
 <b>Feature Extractor</b>: For all tasks, the ResNet-50 encoder is utilized, excluding average pooling, and the last convolution with a stride of 2 is substituted with one having a stride of 1. The size of the output is 16&times;16&times;2048, and a 3&times;3 convolution is applied to transform the output to a final representation. The size of the final feature is 16&times;16&times;8. <br />
 <b>Analytics Model</b>: The analytics model adopts a structure of a 15-layer fully convolutional network, including the preceding 5 convolutional layers, interconnected with alternating convolution and convolution transpose layers. <br />
@@ -504,7 +504,7 @@
 		</table>
 		<br>
 <p align="left"><b>CodeBook</b>: A vector with dimensions of 512&times;16&times;16, which will be further multiplied with an incoming vector to obtain a feature tensor whose spatial size is 16&times;16. <br />
-<b>CodeBookPrediction</b>: the module predicts the probabilistic distribution with the codebook to estimate and constrain entropy. The transform that converts the feature outputted from the codebook to the distribution’s parameters is illustrated in detail in Table 5.</p>
+<b>CodeBookPrediction</b>: the module predicts the probabilistic distribution with the codebook to estimate and constrain entropy. The transform that converts the feature outputted from the codebook to the distribution's parameters is illustrated in detail in Table 5.</p>
 <br>
 <p>Table 5. Detailed structures of the proposed CodeBookPrediction module.</p>
 		<table class='mt'>
@@ -533,7 +533,7 @@
 		<td align="middle">-</td>
 		</tr>
 		<tr>
-		<td align="middle">LeakyReLU</td>
+		<td align="middle">&nbsp;&nbsp;LeakyReLU&nbsp;&nbsp;</td>
 		<th>&emsp; </th>
 		<td align="middle">-</td>
 		<th>&emsp; </th>
@@ -556,7 +556,7 @@
 		<td align="middle">-</td>
 		</tr>
 		<tr>
-		<td align="middle">LeakyReLU</td>
+		<td align="middle">&nbsp;&nbsp;LeakyReLU&nbsp;&nbsp;</td>
 		<th>&emsp; </th>
 		<td align="middle">-</td>
 		<th>&emsp; </th>
@@ -579,7 +579,7 @@
 		<td align="middle">-</td>
 		</tr>
 		<tr>
-		<td align="middle">LeakyReLU</td>
+		<td align="middle">&nbsp;&nbsp;LeakyReLU&nbsp;&nbsp;</td>
 		<th>&emsp; </th>
 		<td align="middle">-</td>
 		<th>&emsp; </th>
@@ -604,7 +604,7 @@
 		
 		</table>
 		<br>
-<p align="left">More details of other modules related to the compression or analytics models, e.g. Gaussian Bottleneck,  follow the basic setting in [1] or the common setting of end-to-end optimized compression methods.</p>
+<p align="left">More details of other modules related to the compression or analytics models, <i>e.g.</i> Gaussian Bottleneck,  follow the basic setting in [1] or the common setting of end-to-end optimized compression methods.</p>
 		<br>
 		
 		<br>
